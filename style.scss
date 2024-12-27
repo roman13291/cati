@@ -1,0 +1,128 @@
+@import 'normalise';
+
+:root{
+    --color-dark:rgba(88, 167, 99, 0.703);
+    --color-dark-alt:rgba(125, 198, 96, 0.611);
+    --color-light:rgba(255, 255, 255, 0.644);
+    --color-orange:#ffffff;
+    --color-green:rgba(244, 222, 144, 0.609);
+    --color-red:rgba(255, 255, 255, 0.5);
+
+    --border:1px, solid, var(--color-dark-alt);
+    --border-radius: 10px;
+
+    --font-family-base: 'Epilogue', sans-serif;
+    --border-radius: 25px;
+}
+body{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    background-image: url(/images/USA_Forests_Autumn_Maroon_Bells_Trees_Trail_613682_1280x853.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+img{
+    border-radius: var(--border-radius);
+}
+a{
+    text-decoration: none;
+    transition: 1s;
+}
+a:hover{
+    color: var(--color-red);
+    text-shadow: 2px 2px 2px  #000;
+}
+.header{
+    background-color: var(--color-orange);
+    border-radius: var(--border-radius);
+    position: sticky;
+    top: 2px;
+
+    .header__inner{
+    margin: 3px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+    .header__menu-list{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    text-align: center;
+    padding-top: 20px;
+    align-items: center;
+}
+    .header__menu-link {
+    text-align: center;
+    align-items: center;
+}
+    .phone {
+    font-size: 30px;
+}
+    .phone_link{
+    display: block;
+    padding: 15px;
+    height: 105px;
+}
+.visible-mobile{
+    display: none;
+}
+@media (max-width: 1200px) {
+    .header__menu-list{
+        font-size: 33px;
+    }
+}
+@media (max-width: 1050px) {
+    .header__menu-list{
+        font-size: 28px;
+    }
+}
+@media (max-width:999px) {
+    .header__menu-list{
+       display: none;
+    }
+    .visible-mobile{
+        display: inline-block;
+        border: none;
+        background-color: var(--color-orange);
+        border-radius: 50%;
+        
+    }
+}}
+
+.service{
+    
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    font-size: 40px;
+    text-align: center;
+    h1{
+        font-weight: 200;
+        color: #314629;
+        
+    }
+}
+.type-service{
+    border-radius: var(--border-radius);
+   background-color:var(--color-red);
+   font-family: Arial, Helvetica, sans-serif;
+   margin-bottom: 30px;
+   h2,
+   h3{
+    font-size: 34px;
+   }
+   .type-service-blok{
+    display: grid;
+    margin-top: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+   .type-service-title{
+    grid-column: 2/3;
+   }
+   .type-service-description{
+    margin-top: 20px;
+    font-size: 22px;
+    padding-right: 10px;
+   }
+}
